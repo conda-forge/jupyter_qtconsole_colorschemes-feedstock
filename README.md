@@ -1,21 +1,28 @@
-About jupyter_qtconsole_colorschemes
-====================================
+About jupyter_qtconsole_colorschemes-feedstock
+==============================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_qtconsole_colorschemes-feedstock/blob/main/LICENSE.txt)
 
 Home: https://bitbucket.org/joon/color-schemes-for-jupyter-qt-console
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
-
 Summary: Color Schemes for Jupyter Qt Console
 
-
+Development: https://bitbucket.org/joon/color-schemes-for-jupyter-qt-console
 
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/jupyter_qtconsole_colorschemes-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/jupyter_qtconsole_colorschemes-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3049&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyter_qtconsole_colorschemes-feedstock?branchName=main">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -31,23 +38,52 @@ Installing `jupyter_qtconsole_colorschemes` from the `conda-forge` channel can b
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupyter_qtconsole_colorschemes` can be installed with:
+Once the `conda-forge` channel has been enabled, `jupyter_qtconsole_colorschemes` can be installed with `conda`:
 
 ```
 conda install jupyter_qtconsole_colorschemes
 ```
 
-It is possible to list all of the versions of `jupyter_qtconsole_colorschemes` available on your platform with:
+or with `mamba`:
+
+```
+mamba install jupyter_qtconsole_colorschemes
+```
+
+It is possible to list all of the versions of `jupyter_qtconsole_colorschemes` available on your platform with `conda`:
 
 ```
 conda search jupyter_qtconsole_colorschemes --channel conda-forge
 ```
 
+or with `mamba`:
+
+```
+mamba search jupyter_qtconsole_colorschemes --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search jupyter_qtconsole_colorschemes --channel conda-forge
+
+# List packages depending on `jupyter_qtconsole_colorschemes`:
+mamba repoquery whoneeds jupyter_qtconsole_colorschemes --channel conda-forge
+
+# List dependencies of `jupyter_qtconsole_colorschemes`:
+mamba repoquery depends jupyter_qtconsole_colorschemes --channel conda-forge
+```
+
 
 About conda-forge
 =================
+
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -57,13 +93,15 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](http://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](http://docs.anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
-[conda-smithy](http://github.com/conda-forge/conda-smithy) has been developed.
+[conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
@@ -99,7 +137,13 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](http://conda.pydata.org/docs/building/meta-yaml.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](http://conda.pydata.org/docs/building/meta-yaml.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@pmlandwehr](https://github.com/pmlandwehr/)
+
